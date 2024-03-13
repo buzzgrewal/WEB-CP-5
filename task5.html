@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Find Class and ID</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    
+    $(document).on('click', function(event) { 
+        const target = $(event.target);
+
+        if (target.attr('id')) {
+            alert("ID: " + target.attr('id'));
+        } else {
+            alert("This element has no ID.");
+        }
+
+        if (target.attr('class')) {
+            alert("Class: " + target.attr('class'));
+        } else {
+            alert("This element has no class.");
+        }
+    });
+});
+</script>
+
+<style>
+    #box {
+        width: 200px;
+        height: 200px;
+        background-color: #f0f0f0;
+        margin: 20px;
+        padding: 20px;
+    }
+
+    #some-paragraph {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    #my-button {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .large {
+        width: 400px;
+        height: 400px;
+    }
+
+    .text-info {
+        color: blue;
+    }
+
+    .btn {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+    .btn-primary:active {
+        background-color: #0056b3;
+    }
+
+    .btn-primary:focus {
+        background-color: #0056b3;
+    }
+
+    .btn-primary:visited {
+        background-color: #0056b3;
+    }
+
+    .btn-primary:disabled {
+        background-color: #0056b3;
+    }
+
+    
+
+</style>
+
+</head>
+<body>
+
+<div id="box" class="container large">Click this box</div>
+<p id="some-paragraph" class="text-info">Click this paragraph</p>
+<button id="my-button" class="btn btn-primary">Click this button</button>
+
+</body>
+</html>
