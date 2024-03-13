@@ -1,47 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Total Width Calculation</title>
-<style>
-#myElement 
-{
-  width: 200px;
-  padding: 15px;
-  border: 5px solid #ccc;
-    margin: 10px;
-    text-align: center;
 
-}
-
-
-</style>
+<meta name="viewport" content="width=device-width">
+<title>Find total width of an element</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script>
-$(document).ready(function() 
-{
-  $("#text").click(function() 
-  {
-    var txt = "";
-    txt += "Width of div: " + $("#myElement").width() + "</br>";
-    txt += "Height of div: " + $("#myElement").height() + "</br>";
-    txt += "Inner width of div: " + $("#myElement").innerWidth() + "</br>";
-    txt += "Inner height of div: " + $("#myElement").innerHeight() + "</br>";
-    txt += "Outer width of div: " + $("#myElement").outerWidth() + "</br>";
-    txt += "Outer height of div: " + $("#myElement").outerHeight() + "</br>";
-    txt += "Outer width of div (margin included): " + $("#myElement").outerWidth(true) + "</br>";
-    txt += "Outer height of div (margin included): " + $("#myElement").outerHeight(true) + "</br>";
-    $("#details").html(txt);
-    $("#details").toggle();
-  });
-});
-</script>
+<style>
+p {
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
+</style>
 </head>
 <body>
-
-<div id="myElement">
-    <p id="text">Click me to see the details</p>
-</div>
+<p id="myText">jQuery Exercises, Practice, Solution</p>
 <p id="details"></p>
 
+<script>
+$(document).ready(function() {
+  $("#myText").click(function() {
+    var totalWidth = $(this).outerWidth(true);
+    $("#details").text("Total width of the paragraph, including padding and border: " + totalWidth + "px.");
+    $("#details").toggle();
+  });
+
+});
+</script>
 </body>
 </html>
