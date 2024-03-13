@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Remove Table Row</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+<script>
+$(document).ready(function(){
+  $(".remove-row").click(function(){
+    $(this).parents("tr").remove();
+  });
+});
+</script>
+<style>
+  table {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+    .remove-row {
+        background-color: #f44336;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+</style>
+</head>
+<body>
+
+  <table id="myTable">
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Action</th>
+    </tr>
+    <tr>
+      <td>Alice</td>
+      <td>28</td>
+      <td><button class="remove-row">Remove</button></td>
+    </tr>
+    <tr>
+      <td>Bob</td>
+      <td>35</td>
+      <td><button class="remove-row">Remove</button></td>
+    </tr>
+  </table>
+
+</body>
+</html>
