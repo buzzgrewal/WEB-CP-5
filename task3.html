@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Task 2</title>
+
+    <style>
+        #image{
+            display: none;
+            height: 400px;
+            width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+
+            
+        }
+
+        #text{
+            display: none;
+        }
+
+        body{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://preview.redd.it/cigarettes-1920x1080-v0-jkxxcgfd3mlc1.jpeg?width=1080&crop=smart&auto=webp&s=5f7882b7ac536d6ed3114609a0f50b69d40474a8" alt="Logo" id="image" >
+    <p id="text">Reference Image</p>
+    <button id="button">Show</button>
+    <button id="button1">Hide</button>
+
+    <script>
+        $(document).ready(function(){
+            $("#button").click(function(){
+                $("#image").toggle();
+                $("#text").toggle();
+            });
+            $("#button1").click(function(){
+                $("#image").toggle();
+                $("#text").toggle();
+            });
+        });
+    </script>
+            
+
+</body>
+</html>
